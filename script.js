@@ -1,17 +1,21 @@
 $(document).ready(function () {
     // Smooth scrolling for navigation links
-    $("a[href^='#']").on('click', function (event) {
+    $("a[href^='#']").on("click", function (event) {
         if (this.hash !== "") {
             event.preventDefault();
-            var hash = this.hash;
+            var target = $(this.hash);
 
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function () {
-                window.location.hash = hash;
-            });
+            if (target.length) {
+                $("html, body").animate(
+                    {
+                        scrollTop: target.offset().top - 70, // Adjust for navbar height
+                    },
+                    800
+                );
+            }
         }
     });
+});
 
     // Example: Dynamically load project details (replace with your actual data)
     $('.project-card a').on('click', function (event) {
