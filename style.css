@@ -260,6 +260,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    scroll-margin-top: 80px; /* Prevent navbar from covering section */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero {
