@@ -256,6 +256,10 @@ footer a:hover {
     background-color: #007bff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero {
